@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>36B6BF47-A8B1-493F-AD14-B13121B8983E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FadingViewDeck</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D47E2138-BEF7-459E-87B5-E5DD4B3064EE</key>
+		<string>https://github.com/kkireto/FadingViewDeck.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FadingViewDeck.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D47E2138-BEF7-459E-87B5-E5DD4B3064EE</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kkireto/FadingViewDeck.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D47E2138-BEF7-459E-87B5-E5DD4B3064EE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D47E2138-BEF7-459E-87B5-E5DD4B3064EE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FadingViewDeck</string>
+		</dict>
+	</array>
+</dict>
+</plist>

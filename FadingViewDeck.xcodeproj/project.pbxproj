@@ -1,0 +1,621 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		601A6A77190D88620033DC4E /* closeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 601A6A75190D88620033DC4E /* closeIcon.png */; };
+		601A6A78190D88620033DC4E /* closeIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 601A6A76190D88620033DC4E /* closeIcon@2x.png */; };
+		601A6A87190E54B90033DC4E /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601A6A86190E54B90033DC4E /* ThirdViewController.m */; };
+		601A6A8A190E54CA0033DC4E /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601A6A89190E54CA0033DC4E /* FourthViewController.m */; };
+		601A6A8D190E54D70033DC4E /* FifthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601A6A8C190E54D70033DC4E /* FifthViewController.m */; };
+		60834C9119090DBD002124F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60834C9019090DBD002124F4 /* Foundation.framework */; };
+		60834C9319090DBD002124F4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60834C9219090DBD002124F4 /* CoreGraphics.framework */; };
+		60834C9519090DBD002124F4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60834C9419090DBD002124F4 /* UIKit.framework */; };
+		60834C9B19090DBD002124F4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60834C9919090DBD002124F4 /* InfoPlist.strings */; };
+		60834C9D19090DBD002124F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60834C9C19090DBD002124F4 /* main.m */; };
+		60834CA119090DBD002124F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60834CA019090DBD002124F4 /* AppDelegate.m */; };
+		60834CA719090DBD002124F4 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60834CA619090DBD002124F4 /* IntroViewController.m */; };
+		60834CB019090DBD002124F4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60834CAF19090DBD002124F4 /* XCTest.framework */; };
+		60834CB119090DBD002124F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60834C9019090DBD002124F4 /* Foundation.framework */; };
+		60834CB219090DBD002124F4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60834C9419090DBD002124F4 /* UIKit.framework */; };
+		60834CBA19090DBD002124F4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60834CB819090DBD002124F4 /* InfoPlist.strings */; };
+		60834CBC19090DBD002124F4 /* FadingViewDeckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60834CBB19090DBD002124F4 /* FadingViewDeckTests.m */; };
+		60834CD119090F9C002124F4 /* UINavigationController+CustomRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 60834CCE19090F9C002124F4 /* UINavigationController+CustomRotation.m */; };
+		60834CD519090FD6002124F4 /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 60834CD419090FD6002124F4 /* Globals.m */; };
+		60834CD8190910B2002124F4 /* FadingViewDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60834CD7190910B2002124F4 /* FadingViewDeckController.m */; };
+		60834CDB19091125002124F4 /* FadingMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60834CDA19091125002124F4 /* FadingMenuViewController.m */; };
+		60834CDE19093040002124F4 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60834CDD19093040002124F4 /* FirstViewController.m */; };
+		60834CE119093266002124F4 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60834CE019093266002124F4 /* SecondViewController.m */; };
+		60834CE61909476D002124F4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60834CE31909476D002124F4 /* Default-568h@2x.png */; };
+		60834CE71909476D002124F4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 60834CE41909476D002124F4 /* Default.png */; };
+		60834CE81909476D002124F4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60834CE51909476D002124F4 /* Default@2x.png */; };
+		60834CEC19094CE6002124F4 /* menuBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 60834CEA19094CE6002124F4 /* menuBg.png */; };
+		60834CED19094CE6002124F4 /* menuBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60834CEB19094CE6002124F4 /* menuBg@2x.png */; };
+		60834CEF19094D01002124F4 /* FadingMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60834CEE19094D01002124F4 /* FadingMenuViewController.xib */; };
+		60834CF2190956A6002124F4 /* menuIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 60834CF0190956A6002124F4 /* menuIcon.png */; };
+		60834CF3190956A6002124F4 /* menuIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60834CF1190956A6002124F4 /* menuIcon@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		60834CB319090DBD002124F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60834C8519090DBD002124F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 60834C8C19090DBD002124F4;
+			remoteInfo = FadingViewDeck;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		601A6A75190D88620033DC4E /* closeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = closeIcon.png; sourceTree = "<group>"; };
+		601A6A76190D88620033DC4E /* closeIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "closeIcon@2x.png"; sourceTree = "<group>"; };
+		601A6A85190E54B90033DC4E /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		601A6A86190E54B90033DC4E /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		601A6A88190E54CA0033DC4E /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
+		601A6A89190E54CA0033DC4E /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
+		601A6A8B190E54D70033DC4E /* FifthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FifthViewController.h; sourceTree = "<group>"; };
+		601A6A8C190E54D70033DC4E /* FifthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FifthViewController.m; sourceTree = "<group>"; };
+		60834C8D19090DBD002124F4 /* FadingViewDeck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FadingViewDeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		60834C9019090DBD002124F4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		60834C9219090DBD002124F4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		60834C9419090DBD002124F4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		60834C9819090DBD002124F4 /* FadingViewDeck-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FadingViewDeck-Info.plist"; sourceTree = "<group>"; };
+		60834C9A19090DBD002124F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		60834C9C19090DBD002124F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		60834C9E19090DBD002124F4 /* FadingViewDeck-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FadingViewDeck-Prefix.pch"; sourceTree = "<group>"; };
+		60834C9F19090DBD002124F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		60834CA019090DBD002124F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		60834CA519090DBD002124F4 /* IntroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
+		60834CA619090DBD002124F4 /* IntroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
+		60834CAE19090DBD002124F4 /* FadingViewDeckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FadingViewDeckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		60834CAF19090DBD002124F4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		60834CB719090DBD002124F4 /* FadingViewDeckTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FadingViewDeckTests-Info.plist"; sourceTree = "<group>"; };
+		60834CB919090DBD002124F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		60834CBB19090DBD002124F4 /* FadingViewDeckTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FadingViewDeckTests.m; sourceTree = "<group>"; };
+		60834CCD19090F9C002124F4 /* UINavigationController+CustomRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+CustomRotation.h"; sourceTree = "<group>"; };
+		60834CCE19090F9C002124F4 /* UINavigationController+CustomRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+CustomRotation.m"; sourceTree = "<group>"; };
+		60834CD319090FD6002124F4 /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
+		60834CD419090FD6002124F4 /* Globals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Globals.m; sourceTree = "<group>"; };
+		60834CD6190910B2002124F4 /* FadingViewDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadingViewDeckController.h; sourceTree = "<group>"; };
+		60834CD7190910B2002124F4 /* FadingViewDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FadingViewDeckController.m; sourceTree = "<group>"; };
+		60834CD919091125002124F4 /* FadingMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadingMenuViewController.h; sourceTree = "<group>"; };
+		60834CDA19091125002124F4 /* FadingMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FadingMenuViewController.m; sourceTree = "<group>"; };
+		60834CDC19093040002124F4 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		60834CDD19093040002124F4 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		60834CDF19093266002124F4 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		60834CE019093266002124F4 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		60834CE31909476D002124F4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		60834CE41909476D002124F4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		60834CE51909476D002124F4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		60834CEA19094CE6002124F4 /* menuBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuBg.png; sourceTree = "<group>"; };
+		60834CEB19094CE6002124F4 /* menuBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuBg@2x.png"; sourceTree = "<group>"; };
+		60834CEE19094D01002124F4 /* FadingMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FadingMenuViewController.xib; sourceTree = "<group>"; };
+		60834CF0190956A6002124F4 /* menuIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuIcon.png; sourceTree = "<group>"; };
+		60834CF1190956A6002124F4 /* menuIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuIcon@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		60834C8A19090DBD002124F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60834C9319090DBD002124F4 /* CoreGraphics.framework in Frameworks */,
+				60834C9519090DBD002124F4 /* UIKit.framework in Frameworks */,
+				60834C9119090DBD002124F4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60834CAB19090DBD002124F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60834CB019090DBD002124F4 /* XCTest.framework in Frameworks */,
+				60834CB219090DBD002124F4 /* UIKit.framework in Frameworks */,
+				60834CB119090DBD002124F4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		60834C8419090DBD002124F4 = {
+			isa = PBXGroup;
+			children = (
+				60834C9619090DBD002124F4 /* FadingViewDeck */,
+				60834CB519090DBD002124F4 /* FadingViewDeckTests */,
+				60834C8F19090DBD002124F4 /* Frameworks */,
+				60834C8E19090DBD002124F4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		60834C8E19090DBD002124F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60834C8D19090DBD002124F4 /* FadingViewDeck.app */,
+				60834CAE19090DBD002124F4 /* FadingViewDeckTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		60834C8F19090DBD002124F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60834C9019090DBD002124F4 /* Foundation.framework */,
+				60834C9219090DBD002124F4 /* CoreGraphics.framework */,
+				60834C9419090DBD002124F4 /* UIKit.framework */,
+				60834CAF19090DBD002124F4 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60834C9619090DBD002124F4 /* FadingViewDeck */ = {
+			isa = PBXGroup;
+			children = (
+				60834CCC19090F9C002124F4 /* Categories */,
+				60834CC619090E9F002124F4 /* Globals */,
+				60834CC519090E9F002124F4 /* FadingViewDeckControll */,
+				60834CC719090E9F002124F4 /* MainScreens */,
+				60834CC919090E9F002124F4 /* Screens */,
+				60834CA519090DBD002124F4 /* IntroViewController.h */,
+				60834CA619090DBD002124F4 /* IntroViewController.m */,
+				60834C9F19090DBD002124F4 /* AppDelegate.h */,
+				60834CA019090DBD002124F4 /* AppDelegate.m */,
+				60834CCB19090ED8002124F4 /* InterfaceBuilder */,
+				60834CC819090E9F002124F4 /* Resources */,
+				60834C9719090DBD002124F4 /* Supporting Files */,
+			);
+			path = FadingViewDeck;
+			sourceTree = "<group>";
+		};
+		60834C9719090DBD002124F4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				60834C9819090DBD002124F4 /* FadingViewDeck-Info.plist */,
+				60834C9919090DBD002124F4 /* InfoPlist.strings */,
+				60834C9C19090DBD002124F4 /* main.m */,
+				60834C9E19090DBD002124F4 /* FadingViewDeck-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60834CB519090DBD002124F4 /* FadingViewDeckTests */ = {
+			isa = PBXGroup;
+			children = (
+				60834CBB19090DBD002124F4 /* FadingViewDeckTests.m */,
+				60834CB619090DBD002124F4 /* Supporting Files */,
+			);
+			path = FadingViewDeckTests;
+			sourceTree = "<group>";
+		};
+		60834CB619090DBD002124F4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				60834CB719090DBD002124F4 /* FadingViewDeckTests-Info.plist */,
+				60834CB819090DBD002124F4 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60834CC519090E9F002124F4 /* FadingViewDeckControll */ = {
+			isa = PBXGroup;
+			children = (
+				60834CD6190910B2002124F4 /* FadingViewDeckController.h */,
+				60834CD7190910B2002124F4 /* FadingViewDeckController.m */,
+				60834CD919091125002124F4 /* FadingMenuViewController.h */,
+				60834CDA19091125002124F4 /* FadingMenuViewController.m */,
+			);
+			path = FadingViewDeckControll;
+			sourceTree = "<group>";
+		};
+		60834CC619090E9F002124F4 /* Globals */ = {
+			isa = PBXGroup;
+			children = (
+				60834CD319090FD6002124F4 /* Globals.h */,
+				60834CD419090FD6002124F4 /* Globals.m */,
+			);
+			path = Globals;
+			sourceTree = "<group>";
+		};
+		60834CC719090E9F002124F4 /* MainScreens */ = {
+			isa = PBXGroup;
+			children = (
+				60834CDC19093040002124F4 /* FirstViewController.h */,
+				60834CDD19093040002124F4 /* FirstViewController.m */,
+				60834CDF19093266002124F4 /* SecondViewController.h */,
+				60834CE019093266002124F4 /* SecondViewController.m */,
+				601A6A85190E54B90033DC4E /* ThirdViewController.h */,
+				601A6A86190E54B90033DC4E /* ThirdViewController.m */,
+				601A6A88190E54CA0033DC4E /* FourthViewController.h */,
+				601A6A89190E54CA0033DC4E /* FourthViewController.m */,
+				601A6A8B190E54D70033DC4E /* FifthViewController.h */,
+				601A6A8C190E54D70033DC4E /* FifthViewController.m */,
+			);
+			path = MainScreens;
+			sourceTree = "<group>";
+		};
+		60834CC819090E9F002124F4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				60834CE919094CE6002124F4 /* Menu */,
+				60834CE21909476D002124F4 /* Default */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		60834CC919090E9F002124F4 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		60834CCB19090ED8002124F4 /* InterfaceBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				60834CEE19094D01002124F4 /* FadingMenuViewController.xib */,
+			);
+			path = InterfaceBuilder;
+			sourceTree = "<group>";
+		};
+		60834CCC19090F9C002124F4 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				60834CCD19090F9C002124F4 /* UINavigationController+CustomRotation.h */,
+				60834CCE19090F9C002124F4 /* UINavigationController+CustomRotation.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		60834CE21909476D002124F4 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				60834CE31909476D002124F4 /* Default-568h@2x.png */,
+				60834CE41909476D002124F4 /* Default.png */,
+				60834CE51909476D002124F4 /* Default@2x.png */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
+		60834CE919094CE6002124F4 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				601A6A75190D88620033DC4E /* closeIcon.png */,
+				601A6A76190D88620033DC4E /* closeIcon@2x.png */,
+				60834CF0190956A6002124F4 /* menuIcon.png */,
+				60834CF1190956A6002124F4 /* menuIcon@2x.png */,
+				60834CEA19094CE6002124F4 /* menuBg.png */,
+				60834CEB19094CE6002124F4 /* menuBg@2x.png */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		60834C8C19090DBD002124F4 /* FadingViewDeck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60834CBF19090DBD002124F4 /* Build configuration list for PBXNativeTarget "FadingViewDeck" */;
+			buildPhases = (
+				60834C8919090DBD002124F4 /* Sources */,
+				60834C8A19090DBD002124F4 /* Frameworks */,
+				60834C8B19090DBD002124F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FadingViewDeck;
+			productName = FadingViewDeck;
+			productReference = 60834C8D19090DBD002124F4 /* FadingViewDeck.app */;
+			productType = "com.apple.product-type.application";
+		};
+		60834CAD19090DBD002124F4 /* FadingViewDeckTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60834CC219090DBD002124F4 /* Build configuration list for PBXNativeTarget "FadingViewDeckTests" */;
+			buildPhases = (
+				60834CAA19090DBD002124F4 /* Sources */,
+				60834CAB19090DBD002124F4 /* Frameworks */,
+				60834CAC19090DBD002124F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				60834CB419090DBD002124F4 /* PBXTargetDependency */,
+			);
+			name = FadingViewDeckTests;
+			productName = FadingViewDeckTests;
+			productReference = 60834CAE19090DBD002124F4 /* FadingViewDeckTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		60834C8519090DBD002124F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "No Name";
+				TargetAttributes = {
+					60834CAD19090DBD002124F4 = {
+						TestTargetID = 60834C8C19090DBD002124F4;
+					};
+				};
+			};
+			buildConfigurationList = 60834C8819090DBD002124F4 /* Build configuration list for PBXProject "FadingViewDeck" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 60834C8419090DBD002124F4;
+			productRefGroup = 60834C8E19090DBD002124F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				60834C8C19090DBD002124F4 /* FadingViewDeck */,
+				60834CAD19090DBD002124F4 /* FadingViewDeckTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		60834C8B19090DBD002124F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				601A6A77190D88620033DC4E /* closeIcon.png in Resources */,
+				60834CEF19094D01002124F4 /* FadingMenuViewController.xib in Resources */,
+				601A6A78190D88620033DC4E /* closeIcon@2x.png in Resources */,
+				60834CE81909476D002124F4 /* Default@2x.png in Resources */,
+				60834CEC19094CE6002124F4 /* menuBg.png in Resources */,
+				60834CF3190956A6002124F4 /* menuIcon@2x.png in Resources */,
+				60834C9B19090DBD002124F4 /* InfoPlist.strings in Resources */,
+				60834CE71909476D002124F4 /* Default.png in Resources */,
+				60834CF2190956A6002124F4 /* menuIcon.png in Resources */,
+				60834CED19094CE6002124F4 /* menuBg@2x.png in Resources */,
+				60834CE61909476D002124F4 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60834CAC19090DBD002124F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60834CBA19090DBD002124F4 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		60834C8919090DBD002124F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				601A6A8D190E54D70033DC4E /* FifthViewController.m in Sources */,
+				60834CE119093266002124F4 /* SecondViewController.m in Sources */,
+				60834CA719090DBD002124F4 /* IntroViewController.m in Sources */,
+				60834CDE19093040002124F4 /* FirstViewController.m in Sources */,
+				60834CA119090DBD002124F4 /* AppDelegate.m in Sources */,
+				60834CDB19091125002124F4 /* FadingMenuViewController.m in Sources */,
+				601A6A8A190E54CA0033DC4E /* FourthViewController.m in Sources */,
+				60834CD119090F9C002124F4 /* UINavigationController+CustomRotation.m in Sources */,
+				601A6A87190E54B90033DC4E /* ThirdViewController.m in Sources */,
+				60834C9D19090DBD002124F4 /* main.m in Sources */,
+				60834CD519090FD6002124F4 /* Globals.m in Sources */,
+				60834CD8190910B2002124F4 /* FadingViewDeckController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60834CAA19090DBD002124F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60834CBC19090DBD002124F4 /* FadingViewDeckTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		60834CB419090DBD002124F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 60834C8C19090DBD002124F4 /* FadingViewDeck */;
+			targetProxy = 60834CB319090DBD002124F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		60834C9919090DBD002124F4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60834C9A19090DBD002124F4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		60834CB819090DBD002124F4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60834CB919090DBD002124F4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		60834CBD19090DBD002124F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		60834CBE19090DBD002124F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		60834CC019090DBD002124F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FadingViewDeck/FadingViewDeck-Prefix.pch";
+				INFOPLIST_FILE = "FadingViewDeck/FadingViewDeck-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		60834CC119090DBD002124F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FadingViewDeck/FadingViewDeck-Prefix.pch";
+				INFOPLIST_FILE = "FadingViewDeck/FadingViewDeck-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		60834CC319090DBD002124F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FadingViewDeck.app/FadingViewDeck";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FadingViewDeck/FadingViewDeck-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FadingViewDeckTests/FadingViewDeckTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		60834CC419090DBD002124F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FadingViewDeck.app/FadingViewDeck";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FadingViewDeck/FadingViewDeck-Prefix.pch";
+				INFOPLIST_FILE = "FadingViewDeckTests/FadingViewDeckTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		60834C8819090DBD002124F4 /* Build configuration list for PBXProject "FadingViewDeck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60834CBD19090DBD002124F4 /* Debug */,
+				60834CBE19090DBD002124F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60834CBF19090DBD002124F4 /* Build configuration list for PBXNativeTarget "FadingViewDeck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60834CC019090DBD002124F4 /* Debug */,
+				60834CC119090DBD002124F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60834CC219090DBD002124F4 /* Build configuration list for PBXNativeTarget "FadingViewDeckTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60834CC319090DBD002124F4 /* Debug */,
+				60834CC419090DBD002124F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 60834C8519090DBD002124F4 /* Project object */;
+}
