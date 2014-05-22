@@ -1,20 +1,20 @@
 //
-//  FadingViewDeckController.h
+//  FadingMenuNavigationController.h
 //  FadingViewDeck
 //
-//  Created by Kireto on 4/24/14.
+//  Created by Kireto on 5/19/14.
 //  Copyright (c) 2014 No Name. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 typedef enum {
-    FadingViewDeckControllerPanLeft,
-    FadingViewDeckControllerPanRight,
-    FadingViewDeckControllerPanNone,
-} FadingViewDeckControllerPanDirection;
+    FadingMenuPanLeft,
+    FadingMenuPanRight,
+    FadingMenuPanNone,
+} FadingMenuPanDirection;
 
-@interface FadingViewDeckController : UIViewController
+@interface FadingMenuNavigationController : UINavigationController
 
 @property (nonatomic,strong) UIViewController* mainController;
 @property (nonatomic,strong) UIViewController* menuController;

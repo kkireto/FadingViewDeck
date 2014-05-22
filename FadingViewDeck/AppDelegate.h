@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @class FadingMenuViewController;
-@class FadingViewDeckController;
+@class FadingMenuNavigationController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (nonatomic,strong) UIWindow *window;
-@property (nonatomic,strong) FadingViewDeckController *fadingViewDeckController;
+@property (nonatomic,strong) FadingMenuNavigationController *fadingMenuNavController;
 @property (nonatomic,strong) FadingMenuViewController *menuViewController;
 
 + (AppDelegate*)instance;

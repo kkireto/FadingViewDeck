@@ -13,7 +13,7 @@
 #import "Globals.h"
 
 #import "FadingMenuViewController.h"
-#import "FadingViewDeckController.h"
+#import "FadingMenuNavigationController.h"
 #import "FirstViewController.h"
 
 @interface IntroViewController ()
@@ -54,16 +54,12 @@
     [AppDelegate instance].menuViewController = menuController;
     
     FirstViewController *mainController = [[FirstViewController alloc] init];
-    UINavigationController *mainNavController = [[UINavigationController alloc] initWithRootViewController:mainController];
-    
     menuController.firstVC = mainController;
-    menuController.firstNC = mainNavController;
     
-    [AppDelegate instance].fadingViewDeckController = [[FadingViewDeckController alloc] initWithMainViewController:mainNavController
-                                                                                                menuViewController:menuNavController];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:[AppDelegate instance].fadingViewDeckController];
+    [AppDelegate instance].fadingMenuNavController = [[FadingMenuNavigationController alloc] initWithMainViewController:mainController
+                                                                                                     menuViewController:menuNavController];
     
-    [self presentViewController:navController animated:NO completion:^{
+    [self presentViewController:[AppDelegate instance].fadingMenuNavController animated:NO completion:^{
         
     }];
 }

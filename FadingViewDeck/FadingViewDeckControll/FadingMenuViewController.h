@@ -23,6 +23,5 @@
 @property (nonatomic,strong) ThirdViewController *thirdVC;
 @property (nonatomic,strong) FourthViewController *fourthVC;
 @property (nonatomic,strong) FifthViewController *fifthVC;
-@property (nonatomic,strong) UINavigationController *firstNC, *secondNC, *thirdNC, *fourthNC, *fifthNC;
 
 @end

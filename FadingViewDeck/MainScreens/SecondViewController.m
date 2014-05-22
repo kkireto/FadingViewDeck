@@ -9,7 +9,7 @@
 #import "SecondViewController.h"
 
 #import "AppDelegate.h"
-#import "FadingViewDeckController.h"
+#import "FadingMenuNavigationController.h"
 
 @interface SecondViewController ()
 
@@ -36,13 +36,13 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [[AppDelegate instance].fadingViewDeckController addPanGessture];
-    [[AppDelegate instance].fadingViewDeckController setupMenuButtonForController:self];
+    [[AppDelegate instance].fadingMenuNavController addPanGessture];
+    [[AppDelegate instance].fadingMenuNavController setupMenuButtonForController:self];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [[AppDelegate instance].fadingViewDeckController removePanGessture];
+    [[AppDelegate instance].fadingMenuNavController removePanGessture];
 }
 
 - (void)didReceiveMemoryWarning

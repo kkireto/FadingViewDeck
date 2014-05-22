@@ -26,7 +26,6 @@
 		60834CBC19090DBD002124F4 /* FadingViewDeckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60834CBB19090DBD002124F4 /* FadingViewDeckTests.m */; };
 		60834CD119090F9C002124F4 /* UINavigationController+CustomRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 60834CCE19090F9C002124F4 /* UINavigationController+CustomRotation.m */; };
 		60834CD519090FD6002124F4 /* Globals.m in Sources */ = {isa = PBXBuildFile; fileRef = 60834CD419090FD6002124F4 /* Globals.m */; };
-		60834CD8190910B2002124F4 /* FadingViewDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60834CD7190910B2002124F4 /* FadingViewDeckController.m */; };
 		60834CDB19091125002124F4 /* FadingMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60834CDA19091125002124F4 /* FadingMenuViewController.m */; };
 		60834CDE19093040002124F4 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60834CDD19093040002124F4 /* FirstViewController.m */; };
 		60834CE119093266002124F4 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60834CE019093266002124F4 /* SecondViewController.m */; };
@@ -38,6 +37,7 @@
 		60834CEF19094D01002124F4 /* FadingMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60834CEE19094D01002124F4 /* FadingMenuViewController.xib */; };
 		60834CF2190956A6002124F4 /* menuIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 60834CF0190956A6002124F4 /* menuIcon.png */; };
 		60834CF3190956A6002124F4 /* menuIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60834CF1190956A6002124F4 /* menuIcon@2x.png */; };
+		60AEBA021929DFC600C686BB /* FadingMenuNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AEBA011929DFC600C686BB /* FadingMenuNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,8 +80,6 @@
 		60834CCE19090F9C002124F4 /* UINavigationController+CustomRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+CustomRotation.m"; sourceTree = "<group>"; };
 		60834CD319090FD6002124F4 /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
 		60834CD419090FD6002124F4 /* Globals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Globals.m; sourceTree = "<group>"; };
-		60834CD6190910B2002124F4 /* FadingViewDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadingViewDeckController.h; sourceTree = "<group>"; };
-		60834CD7190910B2002124F4 /* FadingViewDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FadingViewDeckController.m; sourceTree = "<group>"; };
 		60834CD919091125002124F4 /* FadingMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadingMenuViewController.h; sourceTree = "<group>"; };
 		60834CDA19091125002124F4 /* FadingMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FadingMenuViewController.m; sourceTree = "<group>"; };
 		60834CDC19093040002124F4 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
@@ -96,6 +94,8 @@
 		60834CEE19094D01002124F4 /* FadingMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FadingMenuViewController.xib; sourceTree = "<group>"; };
 		60834CF0190956A6002124F4 /* menuIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuIcon.png; sourceTree = "<group>"; };
 		60834CF1190956A6002124F4 /* menuIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuIcon@2x.png"; sourceTree = "<group>"; };
+		60AEBA001929DFC600C686BB /* FadingMenuNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadingMenuNavigationController.h; sourceTree = "<group>"; };
+		60AEBA011929DFC600C686BB /* FadingMenuNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FadingMenuNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,10 +203,10 @@
 		60834CC519090E9F002124F4 /* FadingViewDeckControll */ = {
 			isa = PBXGroup;
 			children = (
-				60834CD6190910B2002124F4 /* FadingViewDeckController.h */,
-				60834CD7190910B2002124F4 /* FadingViewDeckController.m */,
 				60834CD919091125002124F4 /* FadingMenuViewController.h */,
 				60834CDA19091125002124F4 /* FadingMenuViewController.m */,
+				60AEBA001929DFC600C686BB /* FadingMenuNavigationController.h */,
+				60AEBA011929DFC600C686BB /* FadingMenuNavigationController.m */,
 			);
 			path = FadingViewDeckControll;
 			sourceTree = "<group>";
@@ -402,6 +402,7 @@
 				60834CE119093266002124F4 /* SecondViewController.m in Sources */,
 				60834CA719090DBD002124F4 /* IntroViewController.m in Sources */,
 				60834CDE19093040002124F4 /* FirstViewController.m in Sources */,
+				60AEBA021929DFC600C686BB /* FadingMenuNavigationController.m in Sources */,
 				60834CA119090DBD002124F4 /* AppDelegate.m in Sources */,
 				60834CDB19091125002124F4 /* FadingMenuViewController.m in Sources */,
 				601A6A8A190E54CA0033DC4E /* FourthViewController.m in Sources */,
@@ -409,7 +410,6 @@
 				601A6A87190E54B90033DC4E /* ThirdViewController.m in Sources */,
 				60834C9D19090DBD002124F4 /* main.m in Sources */,
 				60834CD519090FD6002124F4 /* Globals.m in Sources */,
-				60834CD8190910B2002124F4 /* FadingViewDeckController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

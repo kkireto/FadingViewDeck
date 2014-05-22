@@ -1,26 +1,26 @@
 //
-//  FadingViewDeckController.m
+//  FadingMenuNavigationController.m
 //  FadingViewDeck
 //
-//  Created by Kireto on 4/24/14.
+//  Created by Kireto on 5/19/14.
 //  Copyright (c) 2014 No Name. All rights reserved.
 //
 
-#import "FadingViewDeckController.h"
+#import "FadingMenuNavigationController.h"
 
 #define max_velocity 200.0
 
-@interface FadingViewDeckController ()
+@interface FadingMenuNavigationController ()
 
 @property (nonatomic,assign) CGFloat panPercentage;
 @property (nonatomic,assign) CGPoint touchOffset;
 @property (nonatomic,assign) BOOL isMenuVisible;
-@property (nonatomic,assign) FadingViewDeckControllerPanDirection panDirection;
+@property (nonatomic,assign) FadingMenuPanDirection panDirection;
 @property (nonatomic,strong) UIPanGestureRecognizer *panGesture;
 
 @end
 
-@implementation FadingViewDeckController
+@implementation FadingMenuNavigationController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -65,10 +65,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
-}
-
 /*
 #pragma mark - Navigation
 
@@ -79,20 +75,18 @@
     // Pass the selected object to the new view controller.
 }
 */
-
 #pragma mark - setupView
 - (void)setupView {
     
     if (_mainController) {
-        [_mainController.view setFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height)];
-        _mainController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        [self.view addSubview:_mainController.view];
+        [self setViewControllers:[NSArray arrayWithObject:_mainController] animated:NO];
         
         if (_menuController) {
             [_menuController.view setFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height)];
             _menuController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-            [self.view insertSubview:_menuController.view belowSubview:_mainController.view];
+            [self.view addSubview:_menuController.view];
             _menuController.view.alpha = 0.0;
+            _menuController.view.hidden = YES;
         }
     }
 }
@@ -112,14 +106,7 @@
         _mainController = nil;
     }
     _mainController = mainController;
-    [_mainController.view setFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height)];
-    _mainController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    if (_menuController) {
-        [self.view insertSubview:_mainController.view belowSubview:_menuController.view];
-    }
-    else {
-        [self.view addSubview:_mainController.view];
-    }
+    [self setViewControllers:[NSArray arrayWithObject:_mainController] animated:NO];
 }
 
 - (void)setupMenuButtonForController:(UIViewController*)controller {
@@ -153,6 +140,9 @@
     if (_isMenuVisible) {
         targetAlpha = 0.0;
     }
+    else {
+        [_menuController.view setHidden:NO];
+    }
     _isMenuVisible = !_isMenuVisible;
     [UIView animateWithDuration:0.2f
                      animations:^{
@@ -164,7 +154,8 @@
                              
                          }
                          if (!_isMenuVisible) {
-                             [self.view sendSubviewToBack:_menuController.view];
+                             _menuController.view.hidden = YES;
+//                             [self.view sendSubviewToBack:_menuController.view];
                          }
                          self.view.userInteractionEnabled = YES;
                      }];
@@ -193,10 +184,13 @@
             [self.view bringSubviewToFront:_menuController.view];
         }
         if (_isMenuVisible) {
-            _panDirection = FadingViewDeckControllerPanLeft;
+            _panDirection = FadingMenuPanLeft;
         }
         else {
-            _panDirection = FadingViewDeckControllerPanRight;
+            _panDirection = FadingMenuPanRight;
+            [_menuController.view setAlpha:0.0];
+            [_menuController.view setHidden:NO];
+            [self.view bringSubviewToFront:_menuController.view];
         }
     }
     else if (panGesture.state == UIGestureRecognizerStateCancelled || panGesture.state == UIGestureRecognizerStateEnded) {
@@ -206,7 +200,7 @@
         
         CGFloat panVelocity = location.x - _touchOffset.x;
         CGFloat panPercentage = panVelocity/max_velocity;
-        if (_panDirection == FadingViewDeckControllerPanLeft) {
+        if (_panDirection == FadingMenuPanLeft) {
             panPercentage += 1.0;
         }
         if (panPercentage > 1.0) {

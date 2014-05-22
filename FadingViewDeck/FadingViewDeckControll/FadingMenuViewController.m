@@ -13,7 +13,7 @@
 #import "Globals.h"
 #import "AppDelegate.h"
 
-#import "FadingViewDeckController.h"
+#import "FadingMenuNavigationController.h"
 #import "FirstViewController.h"
 #import "SecondViewController.h"
 #import "ThirdViewController.h"
@@ -57,7 +57,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [[AppDelegate instance].fadingViewDeckController setupCloseButtonForController:self];
+    [[AppDelegate instance].fadingMenuNavController setupCloseButtonForController:self];
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -112,7 +112,7 @@
     switch (indexPath.row) {
         case 0:
             if ([Globals selectedMainControllerType] == MainControllerTypeFirst) {
-                [[AppDelegate instance].fadingViewDeckController showHideMenuView];
+                [[AppDelegate instance].fadingMenuNavController showHideMenuView];
             }
             else {
                 [self setFirstController:YES];
@@ -120,7 +120,7 @@
             break;
         case 1:
             if ([Globals selectedMainControllerType] == MainControllerTypeSecond) {
-                [[AppDelegate instance].fadingViewDeckController showHideMenuView];
+                [[AppDelegate instance].fadingMenuNavController showHideMenuView];
             }
             else {
                 [self setSecondController:YES];
@@ -128,7 +128,7 @@
             break;
         case 2:
             if ([Globals selectedMainControllerType] == MainControllerTypeThird) {
-                [[AppDelegate instance].fadingViewDeckController showHideMenuView];
+                [[AppDelegate instance].fadingMenuNavController showHideMenuView];
             }
             else {
                 [self setThirdController:YES];
@@ -136,7 +136,7 @@
             break;
         case 3:
             if ([Globals selectedMainControllerType] == MainControllerTypeFourth) {
-                [[AppDelegate instance].fadingViewDeckController showHideMenuView];
+                [[AppDelegate instance].fadingMenuNavController showHideMenuView];
             }
             else {
                 [self setFourthController:YES];
@@ -144,7 +144,7 @@
             break;
         case 4:
             if ([Globals selectedMainControllerType] == MainControllerTypeFifth) {
-                [[AppDelegate instance].fadingViewDeckController showHideMenuView];
+                [[AppDelegate instance].fadingMenuNavController showHideMenuView];
             }
             else {
                 [self setFifthController:YES];
@@ -157,12 +157,11 @@
 
 #pragma mark - set new main controller
 - (void)setFirstController:(BOOL)animated {
-    if (!_firstNC) {
+    if (!_firstVC) {
         _firstVC = [[FirstViewController alloc] init];
-        _firstNC = [[UINavigationController alloc] initWithRootViewController:_firstVC];
 	}
     [Globals selectMainControllerType:MainControllerTypeFirst];
-    [[AppDelegate instance].fadingViewDeckController setMainViewController:_firstNC animated:YES];
+    [[AppDelegate instance].fadingMenuNavController setMainViewController:_firstVC animated:YES];
     
     [self removeSecondScreen];
     [self removeThirdScreen];
@@ -171,12 +170,11 @@
 }
 
 - (void)setSecondController:(BOOL)animated {
-    if (!_secondNC) {
+    if (!_secondVC) {
         _secondVC = [[SecondViewController alloc] init];
-        _secondNC = [[UINavigationController alloc] initWithRootViewController:_secondVC];
 	}
     [Globals selectMainControllerType:MainControllerTypeSecond];
-    [[AppDelegate instance].fadingViewDeckController setMainViewController:_secondNC animated:YES];
+    [[AppDelegate instance].fadingMenuNavController setMainViewController:_secondVC animated:YES];
     
     [self removeFirstScreen];
     [self removeThirdScreen];
@@ -185,12 +183,11 @@
 }
 
 - (void)setThirdController:(BOOL)animated {
-    if (!_thirdNC) {
+    if (!_thirdVC) {
         _thirdVC = [[ThirdViewController alloc] init];
-        _thirdNC = [[UINavigationController alloc] initWithRootViewController:_thirdVC];
 	}
     [Globals selectMainControllerType:MainControllerTypeThird];
-    [[AppDelegate instance].fadingViewDeckController setMainViewController:_thirdNC animated:YES];
+    [[AppDelegate instance].fadingMenuNavController setMainViewController:_thirdVC animated:YES];
     
     [self removeFirstScreen];
     [self removeSecondScreen];
@@ -199,12 +196,11 @@
 }
 
 - (void)setFourthController:(BOOL)animated {
-    if (!_fourthNC) {
+    if (!_fourthVC) {
         _fourthVC = [[FourthViewController alloc] init];
-        _fourthNC = [[UINavigationController alloc] initWithRootViewController:_fourthVC];
 	}
     [Globals selectMainControllerType:MainControllerTypeFourth];
-    [[AppDelegate instance].fadingViewDeckController setMainViewController:_fourthNC animated:YES];
+    [[AppDelegate instance].fadingMenuNavController setMainViewController:_fourthVC animated:YES];
     
     [self removeFirstScreen];
     [self removeSecondScreen];
@@ -213,12 +209,11 @@
 }
 
 - (void)setFifthController:(BOOL)animated {
-    if (!_fifthNC) {
+    if (!_fifthVC) {
         _fifthVC = [[FifthViewController alloc] init];
-        _fifthNC = [[UINavigationController alloc] initWithRootViewController:_fifthVC];
 	}
     [Globals selectMainControllerType:MainControllerTypeFifth];
-    [[AppDelegate instance].fadingViewDeckController setMainViewController:_fifthNC animated:YES];
+    [[AppDelegate instance].fadingMenuNavController setMainViewController:_fifthVC animated:YES];
     
     [self removeFirstScreen];
     [self removeSecondScreen];
@@ -228,41 +223,31 @@
 
 #pragma mark - clear live screens
 - (void)removeFirstScreen {
-    if (_firstNC) {
-        [_firstNC.view removeFromSuperview];
-        _firstNC = nil;
+    if (_firstVC) {
         _firstVC = nil;
     }
 }
 
 - (void)removeSecondScreen {
-    if (_secondNC) {
-        [_secondNC.view removeFromSuperview];
-        _secondNC = nil;
+    if (_secondVC) {
         _secondVC = nil;
     }
 }
 
 - (void)removeThirdScreen {
-    if (_thirdNC) {
-        [_thirdNC.view removeFromSuperview];
-        _thirdNC = nil;
+    if (_thirdVC) {
         _thirdVC = nil;
     }
 }
 
 - (void)removeFourthScreen {
-    if (_fourthNC) {
-        [_fourthNC.view removeFromSuperview];
-        _fourthNC = nil;
+    if (_fourthVC) {
         _fourthVC = nil;
     }
 }
 
 - (void)removeFifthScreen {
-    if (_fifthNC) {
-        [_fifthNC.view removeFromSuperview];
-        _fifthNC = nil;
+    if (_fifthVC) {
         _fifthVC = nil;
     }
 }
